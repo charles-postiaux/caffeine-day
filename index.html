@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070707">
+  <title>Caffeine Day</title>
+  <meta name="description" content="How much caffeine is still in you at bedtime. Drag your drinks along the day.">
+  <style>
+    html, body { margin: 0; height: 100%; background: #070707; overscroll-behavior: none; }
+    body { display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
+    /* A small widget in the middle; it opens into the full tool. */
+    .cd-wrap { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 16px; }
+    .cd-hint { margin: 0; font: 400 11px/16px ui-monospace, 'SF Mono', Menlo, monospace; letter-spacing: 0.02em; text-transform: uppercase; color: #6E6E6E; }
+  </style>
+</head>
+<body>
+  <main class="cd-wrap"><div id="caffeine"></div><p class="cd-hint">Tap to open</p></main>
+  <script type="module">
+    import { mount } from './caffeine.js';
+    mount(document.getElementById('caffeine'), { widget: true });
+  </script>
+</body>
+</html>
